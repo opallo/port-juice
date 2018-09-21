@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+    
+}
+
+body{
+    margin: 0;
+    background-color: rgb(166, 211, 81);
+    
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    padding: 0px 10% 10% 10%;
+   
+}
+
+
+img{
+    justify-self: center stretch;
+    align-self: center stretch;
+    align-items: center;
+    display: block;
+    width: 100%;
+    transition: all ease-out 150ms;
+    border-radius: 5%;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.226);
+    transform: scale(.9);
+    margin: 0px;
+}
+
+.fruit-cell{
+    
+    box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.274);
+    border-radius: 5%;
+}
+
+
+.fruit-cell:hover img{
+   
+    transition: all ease-out 150ms;
+    z-index: 100;
+    transform: scale(.75);
+    border-radius: 50%;
+    
+}
+
+.fruit-cell:active img{
+    transform: scale(.4);
+}
+
+.description-title{
+    font-family: 'Kalam', cursive;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.534);
+    color: white;
+    text-align: center;
+    padding: 0px;
+    margin:0px;
+    font-size: 25px;
+    
+    
+}
+
+.title-text{
+    font-family: 'Playball', cursive;
+    font-size:100px;
+    text-align:center;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.466);
+    border: 2px solid rgba(255, 255, 255, 0);
+    margin: 5% 10% 5% 10%;  
+    box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.274);
+}
+
+.title-text::after{
+    content: 'by Opallo';
+    padding-left: 15px;
+    bottom: 0px;
+    font-size: 25px;
+}
+
+@media only screen and (max-width: 600px ){
+
+    main{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .title-text{
+       
+        font-size:60px;
+        text-align:center;
+        margin: 5% 10% 5% 10%;
+    }
+}
+
